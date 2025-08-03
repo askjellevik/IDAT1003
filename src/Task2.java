@@ -21,8 +21,10 @@ public class Task2 {
         catch (Exception e) {
         System.err.println(e.getMessage());
             System.out.println("Du skrev sannsynligvis inn et ugyldig tall.");
-
     }
+        finally {
+            scanner.close();
+        }
     }
 
 }
