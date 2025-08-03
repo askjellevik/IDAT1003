@@ -1,14 +1,30 @@
+import java.util.Scanner;
 
 public class Task2 {
+
     public static void main(String[] args) {
+        System.out.println("Skriv inn antall timer:");
+        Scanner scanner = new Scanner(System.in);
 
+        try {
+            int timer = scanner.nextInt();
 
-        System.out.println("Hello and welcome!");
+            System.out.println("Skriv inn antall minutter:");
+            int minutter = scanner.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            System.out.println("Skriv inn antall sekunder:");
+            int sekunder = scanner.nextInt();
+
+            int totalSekunder = timer * 3600 + minutter * 60 + sekunder;
+            System.out.println("Totalt antall sekunder: " + totalSekunder);
+        }
+        catch (Exception e) {
+        System.err.println(e.getMessage());
+            System.out.println("Du skrev sannsynligvis inn et ugyldig tall.");
+    }
+        finally {
+            scanner.close();
         }
     }
+
 }
