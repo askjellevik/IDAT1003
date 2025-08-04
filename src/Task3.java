@@ -19,16 +19,13 @@ public class Task3 {
 
             int minutter = (inpSekunder - timer * 3600) / 60;
 
-            int sekudner = inpSekunder - timer * 3600 - minutter * 60;
+            int sekunder = inpSekunder - timer * 3600 - minutter * 60;
 
-            System.out.println("Du skrev inn " + inpSekunder + ", det tilsvarer " + timer + " timer, " + minutter + " minutter, " + sekudner + " sekunder.");
-
-
-
+            System.out.println("Du skrev inn " + inpSekunder + ", det tilsvarer " + timer + " timer, " + minutter + " minutter, " + sekunder + " sekunder.");
         }
         catch (Exception e) {
-            System.out.println(e.getMessage());
             System.out.println("Skriv inn et heltall");
+            e.printStackTrace();
         }
         finally {
             scanner.close();
