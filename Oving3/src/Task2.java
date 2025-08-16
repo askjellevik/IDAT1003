@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Task1 {
+public class Task2 {
 
 public static void main(String[] args) {
 
@@ -10,21 +10,20 @@ public static void main(String[] args) {
         System.out.println("Skriv inn et tall så sjekker jeg om det er et primtall");
         int inpTall = scanner.nextInt();
 
-        if (inpTall < 1){
+        if (inpTall < 2){
             System.out.println("Du må skrive et positivt heltall");
         }
         else {
             boolean erPrimtall = true;
 
 
-            if (erPrimtall) {
                 for (int i = 2; i < inpTall; i++) {
                     if (inpTall % i == 0) {
                         erPrimtall = false;
 
                     }
                 }
-            }
+
 
 
 

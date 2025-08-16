@@ -31,7 +31,6 @@ public class Task1{
         }
         catch (Exception e) {
             System.out.println("Skriv inn et årstall fra år 0");
-            e.printStackTrace();
         }
         finally {
             scanner.close();
