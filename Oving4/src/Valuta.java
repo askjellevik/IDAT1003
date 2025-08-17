@@ -19,8 +19,10 @@ public class Valuta {
 
 
     //setter
-    public void setValues(String valutaCode, double amount){
+    public void setValutaCode(String valutaCode){
         this.valutaCode = valutaCode;
+    }
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
