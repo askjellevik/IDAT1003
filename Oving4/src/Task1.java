@@ -3,18 +3,18 @@ import java.util.*;
 public class Task1 {
 
 
-    static public void main(String[] args) {
+    public static void main(String[] args) {
 
-        ArrayList<Valuta> objects = new ArrayList<>(); // Create an ArrayList object
+        ArrayList<Valuta> currencyList = new ArrayList<>(); // Create an ArrayList object
 
 
-        objects.add(new Valuta("USD", 12.2));
-        objects.add(new Valuta("EUR", 11.2));
-        objects.add(new Valuta("SEK", 1.6));
+        currencyList.add(new Valuta("USD", 12.2));
+        currencyList.add(new Valuta("EUR", 11.2));
+        currencyList.add(new Valuta("SEK", 1.6));
 
         System.out.println("Velg valuta å konvertere fra, eller skriv inn 4 for å avslutte:");
-        for (int i = 0; i < objects.size(); i++) {
-            System.out.println(i + 1 + ": " + objects.get(i).valutaCode);
+        for (int i = 0; i < currencyList.size(); i++) {
+            System.out.println(i + 1 + ": " + currencyList.get(i).getValutaCode());
         }
 
         Scanner scannerObj = new Scanner(System.in);
@@ -29,17 +29,17 @@ public class Task1 {
             }
             else {
 
-            Valuta selected = objects.get(userInput - 1);
+            Valuta selected = currencyList.get(userInput - 1);
 
-            System.out.println("Du valgte valutaen " + selected.valutaCode + ". Skriv inn hvor mye du vil konvertere fra");
+            System.out.println("Du valgte valutaen " + selected.getValutaCode() + ". Skriv inn hvor mye du vil konvertere fra");
 
 
             int inpUserAmount = scannerObj.nextInt();
 
 
-            double convertedAmount = (inpUserAmount * selected.amount);
+            double convertedAmount = (inpUserAmount * selected.getAmount());
 
-            System.out.println(inpUserAmount + " i NOK blir " + convertedAmount + " i " + selected.valutaCode);
+            System.out.println(inpUserAmount + " i NOK blir " + convertedAmount + " i " + selected.getValutaCode());
 
 }
         } catch (Exception e) {
