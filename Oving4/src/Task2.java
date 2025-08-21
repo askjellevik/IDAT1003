@@ -3,12 +3,12 @@ import java.util.*;
 
 public class Task2 {
 
-
-    private Random terning = new Random();
+    private Random terning;
     private int rundeNr;
 
     public Task2() {
         this.rundeNr = 1;
+        this.terning = new Random();
 
     }
 
@@ -22,38 +22,44 @@ public class Task2 {
 
 
 
-
-
         while (playerA.getPlayerPoints() < 100 && playerB.getPlayerPoints() < 100) {
             int kastA = spill.kastTerning();
             int kastB = spill.kastTerning();
 
-            int newPlayerPointsA = playerA.getPlayerPoints() + kastA;
-            int newPlayerPointsB = playerB.getPlayerPoints() + kastB;
-
-
-            if (newPlayerPointsA <= 100) {
-                playerA.setPlayerPoints(newPlayerPointsA);
-            } else {
-                int differanse = newPlayerPointsA - 100;
-                playerA.setPlayerPoints(100 - differanse);
-            }
-
-            if (newPlayerPointsB <= 100) {
-                playerB.setPlayerPoints(newPlayerPointsB);
-            } else {
-                int differanse = newPlayerPointsB - 100;
-                playerB.setPlayerPoints(100 - differanse);
-            }
+            int pointsToSetA;
+            int pointsToSetB;
 
             if( kastA == 1) {
-                playerA.setPlayerPoints(0);
+                pointsToSetA = 0;
                 System.out.println("Player A kastet 1 og poengsummen er satt til 0");
             }
+            else {
+                pointsToSetA = playerA.getPlayerPoints() + kastA;
+                if (pointsToSetA > 100) {
+                    int differanse = pointsToSetA - 100;
+                    pointsToSetA = 100 - differanse;
+                }
+
+            }
+
             if( kastB == 1) {
-                playerB.setPlayerPoints(0);
+                pointsToSetB = 0;
                 System.out.println("Player B kastet 1 og poengsummen er satt til 0");
             }
+            else {
+                pointsToSetB = playerB.getPlayerPoints() + kastB;
+                if (pointsToSetB > 100) {
+                    int differanse = pointsToSetB - 100;
+                    pointsToSetB = 100 - differanse;
+                }
+
+
+                }
+
+
+
+            playerA.setPlayerPoints(pointsToSetA);
+            playerB.setPlayerPoints(pointsToSetB);
 
 
             System.out.println("Runde nr: " + spill.getRundeNr() + ". Spiller A kastet " + kastA + " og har nå " + playerA.getPlayerPoints());
@@ -87,7 +93,7 @@ public class Task2 {
 
 
 
-        spill.sluttSpill();
+        spill.printSluttSpill();
 
 
 
@@ -102,7 +108,7 @@ public class Task2 {
         return rundeNr;
     }
 
-    public void sluttSpill(){
+    public void printSluttSpill(){
         System.out.println("Spillet er avsluttet. Det varte i " + getRundeNr() + " runder. ");
     }
 }
