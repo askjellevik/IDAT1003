@@ -3,12 +3,10 @@ import java.util.*;
 
 public class Task2 {
 
-    private Random terning;
     private int rundeNr;
 
     public Task2() {
         this.rundeNr = 1;
-        this.terning = new Random();
 
     }
 
@@ -23,8 +21,8 @@ public class Task2 {
 
 
         while (playerA.getPlayerPoints() < 100 && playerB.getPlayerPoints() < 100) {
-            int kastA = spill.kastTerning();
-            int kastB = spill.kastTerning();
+            int kastA = playerA.kastTerning();
+            int kastB = playerB.kastTerning();
 
             int pointsToSetA;
             int pointsToSetB;
@@ -99,10 +97,6 @@ public class Task2 {
 
     }
 
-    public int kastTerning(){
-        int terningkast = (terning.nextInt(6) + 1);
-        return terningkast;
-    }
 
     public int getRundeNr() {
         return rundeNr;

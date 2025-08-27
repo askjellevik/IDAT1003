@@ -1,11 +1,18 @@
+import java.util.Random;
+
 public class Player {
 
     private String playerID;
     private int playerPoints;
+    private Random terning;
+
+
 
     public Player(String playerID) {
         this.playerID = playerID;
         this.playerPoints = 0;
+        this.terning = new Random();
+
     }
 
     public void setPlayerID(String playerID) {
@@ -22,6 +29,11 @@ public class Player {
     }
     public int getPlayerPoints() {
         return playerPoints;
+    }
+
+    public int kastTerning(){
+        int terningkast = (terning.nextInt(6) + 1);
+        return terningkast;
     }
 
 
