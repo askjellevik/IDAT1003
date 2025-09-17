@@ -8,7 +8,7 @@ public class MinRandom {
     }
 
     public int nesteHeltall(int nedre, int ovre) {
-        return object.nextInt(ovre - nedre + 1) + nedre;
+        return object.nextInt(ovre - nedre) + nedre;
     }
 
     public double nesteDesimaltall(double nedre, double ovre) {
