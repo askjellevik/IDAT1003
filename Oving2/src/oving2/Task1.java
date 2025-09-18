@@ -1,3 +1,5 @@
+package oving2;
+
 import java.util.Scanner;
 
 public class Task1{

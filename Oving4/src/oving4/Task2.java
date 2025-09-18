@@ -1,5 +1,4 @@
-import java.util.*;
-
+package oving4;
 
 public class Task2 {
 
@@ -29,7 +28,7 @@ public class Task2 {
 
             if( kastA == 1) {
                 pointsToSetA = 0;
-                System.out.println("Player A kastet 1 og poengsummen er satt til 0");
+                System.out.println("oving4.Player A kastet 1 og poengsummen er satt til 0");
             }
             else {
                 pointsToSetA = playerA.getPlayerPoints() + kastA;
@@ -42,7 +41,7 @@ public class Task2 {
 
             if( kastB == 1) {
                 pointsToSetB = 0;
-                System.out.println("Player B kastet 1 og poengsummen er satt til 0");
+                System.out.println("oving4.Player B kastet 1 og poengsummen er satt til 0");
             }
             else {
                 pointsToSetB = playerB.getPlayerPoints() + kastB;
@@ -72,12 +71,12 @@ public class Task2 {
                 break;
             }
             else if (playerA.getPlayerPoints() == 100 ) {
-                System.out.println("Player A vant");
-                System.out.println("Player A triltet " + kastA + " og nådde 100.");
+                System.out.println("oving4.Player A vant");
+                System.out.println("oving4.Player A triltet " + kastA + " og nådde 100.");
                 break;
             } else if (playerB.getPlayerPoints() == 100) {
-                System.out.println("Player B triltet " + kastB + " og nådde 100.");
-                System.out.println("Player B vant");
+                System.out.println("oving4.Player B triltet " + kastB + " og nådde 100.");
+                System.out.println("oving4.Player B vant");
                 break;
             }
 

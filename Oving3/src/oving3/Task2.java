@@ -1,3 +1,5 @@
+package oving3;
+
 import java.util.*;
 
 public class Task2 {
