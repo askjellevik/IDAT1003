@@ -1,3 +1,5 @@
+package oving2;
+
 public class Task2 {
  // Lag et program som hjelper oss i forhold til følgende problemstilling: Kjøttdeig av merke A
     //koster kr 35,90 for 450 gram, mens kjøttdeig av merke B koster kr 39,50 for 500 gram.

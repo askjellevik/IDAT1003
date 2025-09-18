@@ -1,3 +1,5 @@
+package oving4;
+
 import java.util.Random;
 
 public class Player {

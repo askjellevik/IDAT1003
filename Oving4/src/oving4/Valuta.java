@@ -1,3 +1,5 @@
+package oving4;
+
 public class Valuta {
 
     private String valutaCode;
