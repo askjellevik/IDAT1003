@@ -27,6 +27,10 @@ public class Matrix {
 
     public Matrix addMatrix(Matrix secMatrix) {
 
+        if (this.cols != secMatrix.cols || this.rows != secMatrix.rows)
+            throw new IllegalArgumentException("Begge matrisene må ha like dimensjoner");
+
+
         double[][] newData = new double[rows][cols];
 
         for (int i = 0; i < rows; i++) {
@@ -39,6 +43,10 @@ public class Matrix {
     }
 
     public Matrix multiplyMatrix(Matrix secMatrix) {
+
+        if (this.cols != secMatrix.rows)
+            throw new IllegalArgumentException("Antall kolonner i A må være lik antall rader i B for multiplikasjon.");
+
         double[][] newData = new double[rows][secMatrix.data[0].length];
 
         for (int i = 0; i < rows; i++) {
@@ -54,11 +62,11 @@ public class Matrix {
 
     public Matrix transposeMatrix() {
 
-        double[][] newData = new double[data[0].length][data.length];
+        double[][] newData = new double[cols][rows];
 
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data[0].length; j++) {
-                newData[i][j] = data[j][i];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                newData[j][i] = data[i][j];
             }
         }
 
