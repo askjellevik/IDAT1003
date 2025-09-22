@@ -22,17 +22,24 @@ public class Matrix {
         return cols;
     }
 
-    public Matrix addMatrix() {
+    public Matrix addMatrix(double[][] secMatrix) {
 
         double[][] newData = new double[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                newData[i][j] = this.data[i][j] + secMatrix[i][j];
+            }
+        }
+        
         return new Matrix(newData);
     }
 
 
 
-    public static void main(String[] args) {
 
-    }
+
+
 
 }
 
