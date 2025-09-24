@@ -15,8 +15,8 @@ public class Task3 {
 
         double[][] Bdata = {
                 {9, 8, 7},
-                {6, 5, 4},
-                {3, 2, 1}
+                {6, 5, 4}
+                //{3, 2, 1}
         };
 
         double[][] Cdata = {
@@ -141,10 +141,11 @@ public class Task3 {
 
 
 
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-        finally {
+        } catch (IllegalArgumentException e) {
+            System.err.println("Feil: " + e.getMessage());
+        } catch (RuntimeException e) {
+            System.err.println("Uventet feil: " + e.getMessage());
+        } finally {
             scannerObj.close();
         }
 
