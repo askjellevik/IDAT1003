@@ -33,3 +33,6 @@ bin/
 
 
 **/.gitignore
+
+google_checks.xml
+intellij-java-google-style.xml
