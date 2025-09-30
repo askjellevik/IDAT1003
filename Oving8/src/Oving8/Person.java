@@ -2,9 +2,10 @@ package Oving8;
 
 
 public class Person {
-    private final String firstName, lastName, birthdate;
+    private final String firstName, lastName;
+    private final int birthdate;
 
-    public Person(String firstName, String lastName, String birthdate) {
+    public Person(String firstName, String lastName, int birthdate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdate = birthdate;
@@ -16,7 +17,7 @@ public class Person {
     public String getLastName() {
         return lastName;
     }
-    public String getBirthdate() {
+    public int getBirthdate() {
         return birthdate;
     }
 
