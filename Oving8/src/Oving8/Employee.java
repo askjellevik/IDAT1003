@@ -1,6 +1,5 @@
 package Oving8;
 
-
 import java.util.Calendar;
 
 public class Employee {
@@ -50,11 +49,14 @@ public class Employee {
 
 
     //Methods
-    public double taxPerMonth(){
+    public double getTaxPerMonth(){
         return monthlySalary*taxPercentage/100;
     }
-    public double grossSalary(){
+    public double getGrossSalary(){
         return 12*monthlySalary - 10.5*monthlySalary*taxPercentage/100;
+    }
+    public double getTaxDeduction() {
+        return 10.5*monthlySalary*taxPercentage/100;
     }
     public String getName() {
         return personalia.getLastName() + ", " + personalia.getFirstName();
