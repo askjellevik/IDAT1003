@@ -1,4 +1,4 @@
-package Oving7;
+package oving7;
 import java.util.Scanner;
 
 
