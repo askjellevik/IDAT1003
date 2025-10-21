@@ -60,4 +60,11 @@ public class Event {
   public long getEventDate() {
     return eventDate;
   }
+
+  @Override
+  public String toString() {
+    return "Event #" + eventKey + ": " + eventName + " | " + eventType + " | " + eventLocation
+        + " | " + eventHost + " | " + eventDate;
+  }
+
 }
