@@ -65,16 +65,16 @@ public class MenuUserInterface {
 
   private void registerDish() {
     System.out.println("Enter the name of the new dish:");
-    String inpName = getUserString();
+    final String inpName = getUserString();
 
     System.out.println("Enter the type of the new dish:");
-    String inpType = getUserString();
+    final String inpType = getUserString();
 
     System.out.println("Enter the price of the new dish:");
-    double inpPrice = getUserDouble();
+    final double inpPrice = getUserDouble();
 
     System.out.println("Enter the recipe of the new dish:");
-    String inpRecipe = getUserString();
+    final String inpRecipe = getUserString();
 
     menuRegister.registerNewDish(inpName, inpType, inpPrice, inpRecipe);
     System.out.println("The new dish has been registered.");
