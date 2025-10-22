@@ -99,6 +99,10 @@ public class TaskOne {
         }
 
       } else if (menuChoice == 6) {
+        for (Event event : eventRegistry.events) {
+          System.out.println(event);
+        }
+      } else if (menuChoice == 7) {
         runProgram = false;
       }
 
@@ -118,7 +122,8 @@ public class TaskOne {
     System.out.println("3: Display events based on date");
     System.out.println("4: Display events within two dates");
     System.out.println("5: Display events sorted by date, location or type");
-    System.out.println("6: Terminate program");
+    System.out.println("6: Display all events");
+    System.out.println("7: Terminate program");
   }
 
 
