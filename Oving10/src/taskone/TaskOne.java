@@ -99,7 +99,7 @@ public class TaskOne {
         }
 
       } else if (menuChoice == 6) {
-        for (Event event : eventRegistry.events) {
+        for (Event event : eventRegistry.getEvents()) {
           System.out.println(event);
         }
       } else if (menuChoice == 7) {

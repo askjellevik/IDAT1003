@@ -84,15 +84,21 @@ public class MenuUserInterface {
     System.out.println("Enter the name of the dish you are searching for: ");
     String inpNameOfDish = getUserString();
 
-    System.out.println(menuRegister.findDishByName(inpNameOfDish));
+    displayDish(menuRegister.findDishByName(inpNameOfDish));
   }
 
   private void findDishesByType() {
     System.out.println("Enter the type of the dishes you are searching for: ");
     String inpTypeOfDish = getUserString();
-    for (Dish dish : menuRegister.findDishesByType(inpTypeOfDish)) {
-      System.out.println(dish);
+    ArrayList<Dish> dishes = menuRegister.findDishesByType(inpTypeOfDish);
+    if (!dishes.isEmpty()) {
+      for (Dish dish : menuRegister.findDishesByType(inpTypeOfDish)) {
+        System.out.println(dish);
+      }
+    } else {
+      System.out.println("Could not find any dishes of this type");
     }
+
   }
 
   private void registerMenuWithDishes() {
@@ -135,12 +141,12 @@ public class MenuUserInterface {
     double highestPrice = getUserDouble();
     ArrayList<Menu> menus = menuRegister.getMenusByTotalPrice(lowestPrice, highestPrice);
 
-    for (Menu menu : menus) {
-      System.out.println("<<<-- " + menu.getName() + " MENU -->>>");
-      System.out.println(menu.getName());
-      for (Dish dish : menu.getDishes()) {
-        System.out.println(dish.getName() + ". Price: " + dish.getPrice());
+    if (!menus.isEmpty()) {
+      for (Menu menu : menus) {
+        displayMenu(menu);
       }
+    } else {
+      System.out.println("Could not find any menus within the given total price");
     }
 
   }
@@ -153,11 +159,27 @@ public class MenuUserInterface {
 
   private void findAllMenus() {
     for (Menu menu : menuRegister.getMenus()) {
+      displayMenu(menu);
+    }
+  }
+
+  private void displayMenu(Menu menu) {
+    if (menu != null) {
       System.out.println("<<<-- " + menu.getName() + " MENU -->>>");
       System.out.println(menu.getName());
       for (Dish dish : menu.getDishes()) {
         System.out.println(dish.getName() + ". Price: " + dish.getPrice());
       }
+    } else {
+      System.out.println("Could not find this menu");
+    }
+  }
+
+  private void displayDish(Dish dish) {
+    if (dish != null) {
+      System.out.println(dish);
+    } else {
+      System.out.println("Could not find this dish");
     }
   }
 

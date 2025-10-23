@@ -13,11 +13,12 @@ public class Dish {
 
 
   /**
-   * Create a new dish:     *
-   *    * @param name of the dish.
-   *    * @param type of the dish.
-   *    * @param price of the dish.
-   *    * @param recipe of the dish.
+   * Create a new dish.
+   *
+   * @param name   the name of the dish
+   * @param type   the type of the dish
+   * @param price  the price of the dish
+   * @param recipe the recipe of the dish
    */
   public Dish(String name, String type, double price, String recipe) {
     this.name = name;

@@ -18,13 +18,13 @@ public class TaskTwo {
     // Hardcoded lunch menu to test.
     ArrayList<Dish> lunchDishes = new ArrayList<>();
     lunchDishes.add(menuRegister.findDishByName("Club Sandwich"));
-    menuRegister.registerNewMenu("Lunch menu", lunchDishes);
+    menuRegister.registerNewMenu("Lunch", lunchDishes);
 
     // Hardcoded dinner menu to test.
     ArrayList<Dish> dinnerDishes = new ArrayList<>();
     dinnerDishes.add(menuRegister.findDishByName("Pizza"));
     dinnerDishes.add(menuRegister.findDishByName("Lasagne"));
-    menuRegister.registerNewMenu("Dinner menu", dinnerDishes);
+    menuRegister.registerNewMenu("Dinner", dinnerDishes);
 
     MenuUserInterface menuUserInterface = new MenuUserInterface(menuRegister);
 

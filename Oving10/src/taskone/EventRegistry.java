@@ -10,7 +10,7 @@ import java.util.Objects;
  * */
 public class EventRegistry {
 
-  public ArrayList<Event> events;
+  private ArrayList<Event> events;
 
 
   /**
@@ -90,5 +90,7 @@ public class EventRegistry {
     return tempEvents;
   }
 
-
+  public ArrayList<Event> getEvents() {
+    return events;
+  }
 }

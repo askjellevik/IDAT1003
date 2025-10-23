@@ -17,13 +17,14 @@ public class Event {
   private final long eventDate;
 
   /**
-   * Create a new Event.   *
-   *    * @param eventKey unique identifier for the event
-   *    * @param eventName human-readable name of the event
-   *    * @param eventLocation place where the event takes place
-   *    * @param eventHost organizer or host of the event
-   *    * @param eventType type/category of the event
-   *    * @param eventDate date of the event as YYYY-MM-DD HH:MI
+   * Create a new Event.
+   *
+   * @param eventKey unique identifier for the event
+   * @param eventName human-readable name of the event
+   * @param eventLocation place where the event takes place
+   * @param eventHost organizer or host of the event
+   * @param eventType type/category of the event
+   * @param eventDate date of the event as YYYY-MM-DD HH:MI
    */
   public Event(int eventKey, String eventName, String eventLocation,
       String eventHost, String eventType, long eventDate) {
