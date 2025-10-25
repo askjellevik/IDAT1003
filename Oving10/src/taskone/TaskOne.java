@@ -146,7 +146,7 @@ public class TaskOne {
    * Method to read only 12 integers from user.
    * */
   public static long readDateAsLong(Scanner scanner) {
-    System.out.println("Enter the number of your choice: ");
+    System.out.println("Enter the date of your choice (12 integers): ");
     while (true) {
       if (scanner.hasNextLong()) {
         return scanner.nextLong();

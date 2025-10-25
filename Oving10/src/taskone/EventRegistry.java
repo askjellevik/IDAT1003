@@ -64,8 +64,8 @@ public class EventRegistry {
       long endIntervalEventDate) {
     ArrayList<Event> tempEvents = new ArrayList<>();
     for (Event event : events) {
-      if (startIntervalEventDate < event.getEventDate()
-          && event.getEventDate() < endIntervalEventDate) {
+      if (startIntervalEventDate <= event.getEventDate()
+          && event.getEventDate() <= endIntervalEventDate) {
         tempEvents.add(event);
       }
     }
